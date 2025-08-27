@@ -1,4 +1,4 @@
-// File: C:\PROJETOS\LIMPCAR\src\app\checklist\page.tsx
+// File: C:\PROJETOS\LIMPCAR_OLD\checklistFoto\src\app\checklist\page.tsx
 import * as entry from '../../../../src/app/checklist/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

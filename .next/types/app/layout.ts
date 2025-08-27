@@ -1,4 +1,4 @@
-// File: C:\PROJETOS\LIMPCAR\src\app\layout.tsx
+// File: C:\PROJETOS\LIMPCAR_OLD\checklistFoto\src\app\layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

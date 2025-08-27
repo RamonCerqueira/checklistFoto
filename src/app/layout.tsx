@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Checklist App',
+  title: 'Soft Checklist',
   description: 'Registro de avarias e fotos para serviços',
 };
 
