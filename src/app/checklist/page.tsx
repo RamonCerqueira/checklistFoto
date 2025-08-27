@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Camera, Send } from 'lucide-react';
+import { Camera, Image } from 'lucide-react';
 import ActionButtons from '../../components/ActionButtons';
 
 export default function ChecklistPage() {
@@ -40,6 +40,8 @@ export default function ChecklistPage() {
   };
 
   const handleSubmit = () => {
+    if (!phone) return alert('Informe um telefone válido!');
+    if (!plate) return alert('Informe uma placa válida!');
     alert('Checklist salvo com sucesso!');
   };
 
@@ -85,7 +87,7 @@ export default function ChecklistPage() {
           <label className="block text-sm font-semibold mb-1 text-gray-700">Telefone WhatsApp</label>
           <input
             type="tel"
-            placeholder="55999999999"
+            placeholder="5571999999999"
             value={phone}
             disabled={phoneLocked}
             onChange={(e) => setPhone(e.target.value)}
@@ -101,16 +103,33 @@ export default function ChecklistPage() {
                 <div className="text-sm font-medium text-gray-700">
                   Foto {i + 1} {i < 6 && <span className="text-red-500">*</span>}
                 </div>
-                <label className="flex items-center gap-2 text-green-600 cursor-pointer text-sm">
-                  <Camera size={18} />
-                  <span>{photo ? 'Alterar' : 'Adicionar'}</span>
-                  <input
-                    type="file"
-                    accept="image/*"
-                    className="hidden"
-                    onChange={(e) => handlePhotoChange(i, e.target.files?.[0] || null)}
-                  />
-                </label>
+
+                <div className="flex gap-2">
+                  {/* Botão Galeria */}
+                  <label className="flex items-center gap-2 text-green-600 cursor-pointer text-sm">
+                    <Image size={18} />
+                    Galeria
+                    <input
+                      type="file"
+                      accept="image/*"
+                      className="hidden"
+                      onChange={(e) => handlePhotoChange(i, e.target.files?.[0] || null)}
+                    />
+                  </label>
+
+                  {/* Botão Câmera */}
+                  <label className="flex items-center gap-2 text-green-600 cursor-pointer text-sm">
+                    <Camera size={18} />
+                    Câmera
+                    <input
+                      type="file"
+                      accept="image/*"
+                      capture="environment"
+                      className="hidden"
+                      onChange={(e) => handlePhotoChange(i, e.target.files?.[0] || null)}
+                    />
+                  </label>
+                </div>
               </div>
 
               {/* Preview */}
