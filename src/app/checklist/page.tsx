@@ -8,8 +8,8 @@ export default function ChecklistPage() {
   const [plate, setPlate] = useState('');
   const [phone, setPhone] = useState('');
   const [phoneLocked, setPhoneLocked] = useState(false);
-  const [photos, setPhotos] = useState<(File | null)[]>(Array(10).fill(null));
-  const [descriptions, setDescriptions] = useState<string[]>(Array(10).fill(''));
+  const [photos, setPhotos] = useState<(File | null)[]>(Array(6).fill(null));
+  const [descriptions, setDescriptions] = useState<string[]>(Array(6).fill(''));
 
   // --- Funções da página ---
   const handleSearchPlate = async () => {
