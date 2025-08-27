@@ -62,7 +62,7 @@ export default function ChecklistPage() {
   // --- JSX ---
   return (
     <div className="min-h-screen bg-gray-100 p-4">
-      <div className="max-w-md mx-auto bg-white rounded-2xl shadow-md p-5 space-y-4">
+      <div className="max-w-md mx-auto bg-white rounded-2xl shadow-md p-5 space-y-4 mb-4">
         <h1 className="text-xl font-bold text-center text-green-700">📋 Check List - Registro</h1>
 
         {/* Placa */}
@@ -96,7 +96,7 @@ export default function ChecklistPage() {
         </div>
 
         {/* Fotos + descrição + preview */}
-        <div className="space-y-3">
+        <div className="space-y-2">
           {photos.map((photo, i) => (
             <div key={i} className="border rounded-xl p-3 bg-gray-50">
               <div className="flex items-center justify-between mb-2">
@@ -156,11 +156,13 @@ export default function ChecklistPage() {
         </div>
 
         {/* Botões */}
+        <div className='mt-10'>
         <ActionButtons
           onSave={handleSubmit}
           onWhatsApp={handleWhatsApp}
           onClear={handleClearAll}
         />
+        </div>
       </div>
     </div>
   );
